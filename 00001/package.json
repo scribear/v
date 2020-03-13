@@ -2,7 +2,7 @@
   "name": "ScribeAR",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ScribeAR.github.io/v/00001/v/index.html",
+  "homepage": "https://ScribeAR.github.io/v/00001/index.html",
   "dependencies": {
     "handlebars": "^4.5.3",
     "prop-types": "^15.7.2",
