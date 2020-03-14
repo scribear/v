@@ -23,7 +23,7 @@ export default function App() {
      botHeight += 'vh'
      var bgColor = invertColors ? 'white': 'black'
      var color = invertColors ? 'black' : 'white'
-     if (bgColor == 'black') {
+     if (bgColor == 'white') {
        return (
             <div className="App-1" style={{
                  backgroundColor: 'black',
