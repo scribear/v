@@ -31,7 +31,7 @@ export default function Options() {
                          decrement={decrement_textSize} />
                </div>
                <div className="item-wrapper">
-                    <Slider item="Line line line linelinelineline" setting={lineWidth}
+                    <Slider item="Line Width" setting={lineWidth}
                          increment={increment_lineWidth}
                          decrement={decrement_lineWidth} />
                </div>
