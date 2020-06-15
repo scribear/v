@@ -209,6 +209,21 @@
     font-size: 20px;
     margin-left: 39%;
 }
+#versioncontrol5 a {
+    text-decoration: underline;
+    color: #E84A27;
+}
+
+
+
+#versioncontrol5 h1 {
+    color: #E84A27;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    margin-top: 1%;
+    font-size: 20px;
+    margin-left: 39%;
+}
 
 /*
 #about {    
