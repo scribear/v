@@ -9,7 +9,6 @@ import swal from 'sweetalert';
 
 
 //const key = (state) =>state.azureKey
-//7882896e3ffc4fe3b2f4c055f0914d67
 var key = 'empty';
 var regionOption = 'empty';
 var lang = 'en-US';
