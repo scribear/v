@@ -1,0 +1,81 @@
+.detail_wrap{
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    visibility: 0;
+    opacity: 0;
+    height: 0;
+}
+
+.download {
+  right: 0;
+}
+
+.MuiSvgIcon-root-17 {
+  filter: invert(0.5) sepia(1)  saturate(50) hue-rotate(120deg);
+  top: 2.2vh;
+  z-index: 2;
+}
+.MuiSvgIcon-root-18 {
+  filter: invert(0.5) sepia(1)  saturate(46) hue-rotate(45deg);
+  top: 2.2vh;
+  z-index: 2;
+}
+.MuiSvgIcon-root-19 {
+  filter: invert(1) sepia(1)  saturate(85) hue-rotate(0deg);
+  color:red;
+  top: 2.2vh;
+  z-index: 2;
+}
+
+.d-table {
+display:table;
+}
+
+.d-table-cell {
+display:table-cell;
+}
+
+.w-100 {
+width: 100%;
+}
+
+.tar {
+ text-align: right;
+}
+
+.tar2 {
+  padding: 10px;
+  font-size: 32px;
+}
+
+.detail_wrap:hover {
+    opacity: 1;
+    visibility: 1;
+    height: 9vh;
+}
+.active {
+    opacity: 1;
+    visibility: 1;
+    height: 9vh;
+}
+
+.exit{
+    position: absolute;
+    left:90vw;
+    top:8vh;
+}
+
+.hidden-text{
+    display: none;
+}
+.lock-wrap:hover .hidden-text{
+    display: block;
+}
+.d-table-cell-tar {
+  transform: scale(1.4);
+  position: absolute;
+  left:92vw;
+}
