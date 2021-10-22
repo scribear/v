@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function(){
     showDenyButton: true,
     confirmButtonText: 'Yes!',
   }).then((result) => {
-    /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
       Swal.fire('Switching to Azure', '', 'success')
       desiredAPI = 1
@@ -85,6 +84,12 @@ stateCurrentAPI.current = apiStatus
       }
     );
   };
+
+  const  checkNull = async (input: string) => {
+    if (input == null || input == "" ) {
+      input = "empty"
+    } 
+  }
   let fullTranscripts;
   if (desiredAPI == 0) {
     fullTranscripts = transcripts
@@ -94,14 +99,13 @@ stateCurrentAPI.current = apiStatus
   const capts = document.getElementById('captionsSpace')
   if (capts != null) {
   var isScrolledToBottom = capts.scrollHeight - capts.clientHeight <= capts.scrollTop + 1
-  if (isScrolledToBottom)
-      capts.scrollTop = capts.scrollHeight - capts.clientHeight // scroll to bottom
+  capts.scrollTop = capts.scrollHeight - capts.clientHeight // scroll to bottom
   }
   return (
     <div>      
       <ul >
         {fullTranscripts.map(transcript => (
-          <h3  id = "captionsSpace" style ={{position: 'fixed', width: '90%', textAlign: 'left', left: '0', fontSize: textSizeA, paddingLeft: '5%', paddingRight: '60%', overflowY: 'scroll', height: '40%'}}>{transcript}</h3>
+          <h3  id = "captionsSpace" style ={{position: 'fixed', width: '90%', textAlign: 'left', left: '0', fontSize: textSizeA, paddingLeft: '5%', paddingRight: '60%', overflowY: 'scroll', height: '40%', color: textSize.textColor}}>{transcript}</h3>
         ))}
       </ul>
     </div>

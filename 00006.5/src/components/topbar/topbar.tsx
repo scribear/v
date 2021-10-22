@@ -4,7 +4,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import SideBar from '../sidebar/sidebar'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
-import { ApiStatus, RootState} from '../../redux/types';
+import Fullscreen from './fullScreen'
+import { ApiStatus, RootState, DisplayStatus } from '../../redux/types';
 import { useDispatch, useSelector } from 'react-redux';
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -18,13 +19,14 @@ const currTheme = createTheme({
 });
 
 export default function TemporaryDrawer(props) {
-    
-    const myTheme = currTheme;
     const [state, setState] = React.useState({
         isOpen: false
     });
     const apiStatus = useSelector((state: RootState) => {
         return state.APIStatusReducer as ApiStatus;
+    })
+    const displayStatus = useSelector((state: RootState) => {
+        return state.DisplayReducer as DisplayStatus;
     })
     let display = "Webspeech"
     if (apiStatus.currentAPI == 1) {
@@ -34,6 +36,7 @@ export default function TemporaryDrawer(props) {
     } else {
         display = "Webspeech"
     }
+    const myTheme = currTheme
     const toggleDrawer =
         (open: boolean) =>
             (event: React.MouseEvent) => {
@@ -41,7 +44,7 @@ export default function TemporaryDrawer(props) {
             };
     return (
         <AppBar position="fixed" style={{height: '10vh'}}>
-            <Toolbar>
+            <Toolbar style={{backgroundColor: displayStatus.secondaryColor}}>
                 <div className="d-table-cell tar">
                     <IconButton
                         onClick={toggleDrawer(true)}
@@ -60,10 +63,14 @@ export default function TemporaryDrawer(props) {
                 <div className="border d-table w-100">
                     <h2 className="d-table-cell tar2">ScribeAR</h2>
                 </div>
-                <div  style ={{position: 'fixed', right: '7vw'}}>
+                <div  style ={{position: 'relative', left: '62vw'}}>
                 <PickApi />
                 </div>
-                <h3 style ={{position: 'fixed', right: '10vw'}}> {display} </h3>
+                <h3 style ={{position: 'relative', left: '62.5vw'}}> {display} </h3>
+                <div  style ={{position: 'absolute', left: '93vw', paddingLeft: '2vw'}}>
+
+                <Fullscreen/>
+                </div>
 
             </Toolbar>
         </AppBar>

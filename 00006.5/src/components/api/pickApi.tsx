@@ -77,6 +77,7 @@ const IconStatus = (currentAPI: any) => {
 export default function STT(props) {
     const dispatch = useDispatch()
     const myTheme = currTheme
+
     const [state, setState] = React.useState({
         azureStatus: false,
         streamTextStatus: false,

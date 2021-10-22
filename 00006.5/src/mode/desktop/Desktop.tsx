@@ -3,6 +3,7 @@ import AppBar from '../../components/topbar/topbar'
 import { RootState } from '../../redux/types';
 import { WebRecognitionExample } from '../../components/api/recogComponent';
 import { Provider, useDispatch, useSelector} from 'react-redux';
+import Theme from '../../components/sidebar/display/themeOption';
 import { store } from '../../store';
 
 /* todo:
@@ -14,6 +15,7 @@ export default function Desktop(props) {
    const isRecording = useSelector((state: RootState) => {
       return state;
    });   
+
 
    console.log(isRecording)
    const dispatch = useDispatch()

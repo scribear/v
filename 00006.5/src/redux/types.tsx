@@ -46,7 +46,9 @@ export type ControlStatus = {
 */
 export type DisplayStatus = {
     textSize: number
-    color: number
+    primaryColor: string
+    secondaryColor: string
+    textColor: string
 }
 /*
     All above reducer interfaces together

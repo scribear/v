@@ -2,6 +2,8 @@ import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import { RootState, ControlStatus } from '../../../redux/types';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Theme from '../../theme'
 import { useDispatch, useSelector } from 'react-redux';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -71,6 +73,8 @@ const StyledMenu = styled((props: MenuProps) => (
 }));
 
 export default function CustomizedMenus() {
+  const {myTheme} = Theme()
+
   const dispatch = useDispatch();
   const control = useSelector((state: RootState) => {
     return state.ControlReducer as ControlStatus;
@@ -95,6 +99,8 @@ export default function CustomizedMenus() {
 
   return (
     <div>
+        <ThemeProvider theme={myTheme}>
+
       <Button
         id="demo-customized-button"
         aria-controls="demo-customized-menu"
@@ -123,6 +129,8 @@ export default function CustomizedMenus() {
             </MenuItem>
           )}          
       </StyledMenu>
+      </ThemeProvider>
+
     </div>
   );
 }

@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import Input from '@material-ui/core/Input';
 import { RootState, DisplayStatus } from '../../../redux/types';
 import { useDispatch, useSelector } from 'react-redux';
-
 const useStyles = makeStyles({
   slider: {
     width: '16vw',
@@ -16,7 +15,6 @@ const useStyles = makeStyles({
     marginLeft: '1vw'
   }
 });
-
 function valuetext(value) {
   return `${value}`;
 }
@@ -25,20 +23,18 @@ export default function PlusMinus(props) {
   const textS = useSelector((state: RootState) => {
     return state.DisplayReducer as DisplayStatus;
   });
-  const classes = useStyles();
 
   const handleInputChangeInput = (event) => {
     let copyStatus = Object.assign({}, textS);
     copyStatus.textSize = Number(event.target.value)
-    dispatch({type: 'SET_TEXT', payload: copyStatus})
+    dispatch({ type: 'SET_TEXT', payload: copyStatus })
   }
   const handleInputChangeSlider = (event) => {
     let copyStatus = Object.assign({}, textS);
     copyStatus.textSize = event
-    dispatch({type: 'SET_TEXT', payload: copyStatus})
-
+    dispatch({ type: 'SET_TEXT', payload: copyStatus })
   }
-
+  const styles = useStyles()
   const handleBlur = () => {
     let copyStatus = Object.assign({}, textS);
     if (textS.textSize < 1) {
@@ -46,47 +42,45 @@ export default function PlusMinus(props) {
     } else if (textS.textSize > 15) {
       copyStatus.textSize = 1
     }
-    dispatch({type: 'SET_TEXT', payload: copyStatus})
-
+    dispatch({ type: 'SET_TEXT', payload: copyStatus })
   };
-
   return (
-    <div className={classes.slider}>
-      <Typography id="discrete-slider" gutterBottom>
-      </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs>
-          <Slider
-            defaultValue={textS.textSize}
-            getAriaValueText={valuetext}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            onChange={(e, val) => { handleInputChangeSlider(val) }}
-            step={1}
-            marks
-            min={1}
-            max={15}
-          />
+    <div className={styles.slider}>
+        <Typography gutterBottom>
+        </Typography>
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs>
+            <Slider
+              style={{ color: textS.secondaryColor }}
+              defaultValue={textS.textSize}
+              getAriaValueText={valuetext}
+              aria-labelledby="discrete-slider"
+              valueLabelDisplay="auto"
+              onChange={(e, val) => { handleInputChangeSlider(val) }}
+              step={1}
+              marks
+              min={1}
+              max={15}
+            />
+          </Grid>
+          <div className={styles.textBox}>
+            <Grid item>
+              <Input
+                value={textS.textSize}
+                margin="dense"
+                onChange={handleInputChangeInput}
+                onBlur={handleBlur}
+                inputProps={{
+                  step: 1,
+                  min: 1,
+                  max: 15,
+                  type: 'number',
+                  'aria-labelledby': 'input-slider',
+                }}
+              />
+            </Grid>
+          </div>
         </Grid>
-        <div className={classes.textBox}>
-        <Grid item>
-
-          <Input
-            value={textS.textSize}
-            margin="dense"
-            onChange={handleInputChangeInput}
-            onBlur={handleBlur}
-            inputProps={{
-              step: 1,
-              min: 1,
-              max: 15,
-              type: 'number',
-              'aria-labelledby': 'input-slider',
-            }}
-          />
-        </Grid>
-        </div>
-      </Grid>
     </div>
   )
 }

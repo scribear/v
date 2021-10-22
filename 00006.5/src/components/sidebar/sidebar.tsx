@@ -4,7 +4,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import IconButton from "@mui/material/IconButton";
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-import MicIcon from '@mui/icons-material/Mic';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -13,6 +12,8 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
 import TextSize from './display/textSize'
+import ThemeDropdown from './display/themeDropdown'
+import MessageIcon from '@mui/icons-material/Message';
 import SpeechLanguage from './STT/speechLanguage'
 import TextLanguage from './STT/textLanguage'
 
@@ -43,7 +44,7 @@ export default function STT(props) {
       >
         <ListItem>
           <ListItemIcon>
-            <MicIcon />
+            <MessageIcon />
           </ListItemIcon>
           <ListItemText primary="Speech To Text" />
           <IconButton onClick={toggleDrawer("stt")} >
@@ -86,8 +87,7 @@ export default function STT(props) {
 
             <ListItem sx={{ pl: 4, pt: 5}}>
               <ListItemText primary="Theme" />
-              <ArchitectureIcon />
-
+              <ThemeDropdown/>
             </ListItem>
           </List>
         </Collapse>

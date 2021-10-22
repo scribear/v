@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import ApiIcon from '@mui/icons-material/Api';
 import Menu from '@mui/material/Menu';
+import MicIcon from '@mui/icons-material/Mic';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import StreamTextLogin from '../api/pickApi'
@@ -21,7 +21,7 @@ export default function AccountMenu() {
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
         <Tooltip title="API choice">
           <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}>
-            <ApiIcon sx={{ width: 32, height: 32, color: 'white'}}>M</ApiIcon>
+            <MicIcon sx={{ width: 32, height: 32, color: 'white'}}>M</MicIcon>
           </IconButton>
         </Tooltip>
       </Box>

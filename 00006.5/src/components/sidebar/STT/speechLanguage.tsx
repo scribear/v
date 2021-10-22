@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Theme from '../../theme'
 import { RootState, ControlStatus } from '../../../redux/types';
 import { useDispatch, useSelector } from 'react-redux';
 import Menu, { MenuProps } from '@mui/material/Menu';
@@ -42,26 +44,6 @@ const languages = [
   "zh-CN",
   "zh-HK",
   "zh-TW",]
-
-  const textLanguages = [
-    "ar",
-    "da",
-    "de",
-    "en",
-    "es",
-    "fi",
-    "fr",
-    "hi",
-    "it",
-    "ja",
-    "ko",
-    "nb",
-    "nl",
-    "pl",
-    "pt",
-    "ru",
-    "sv",
-    "zh",]
 
 const StyledMenu = styled((props: MenuProps) => (
   <Menu
@@ -124,8 +106,13 @@ export default function CustomizedMenus() {
     setAnchorEl(null);
   }
 
+  const {myTheme} = Theme()
+
+
   return (
     <div>
+                              <ThemeProvider theme={myTheme}>
+
       <Button
         id="demo-customized-button"
         aria-controls="demo-customized-menu"
@@ -154,6 +141,8 @@ export default function CustomizedMenus() {
             </MenuItem>
           )}          
       </StyledMenu>
+      </ThemeProvider>
+
     </div>
   );
 }

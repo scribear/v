@@ -21,12 +21,12 @@ const initialAPIStatusState : ApiStatus = {
 }
 
 const initialAzureState : AzureStatus = {
-    azureKey: "NULL",
-    azureRegion: "NULL",
+    azureKey: "Enter",
+    azureRegion: "Enter",
 }
 
 const initialStreamtextState : StreamtextStatus = {
-    key: "NULL"
+    key: "Enter"
 }
 
 const saveLocally = (varName: string, value: any) => {
