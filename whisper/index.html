@@ -151,7 +151,7 @@
             function loadWhisper(model) {
                 let urls = {
                     'tiny.en': 'https://gnp4.web.illinois.edu/scribear/data/ggml-model-whisper-tiny.en.bin',
-                    'base.en': 'https://whisper.ggerganov.com/ggml-model-whisper-base.en.bin',
+                    'base.en': 'https://gnp4.web.illinois.edu/scribear/data/ggml-model-whisper-base.en.bin',
                 };
 
                 let sizes = {
@@ -409,10 +409,10 @@
             window.addEventListener('storage', (event) => {
                 if (event.key === 'listening') {
                     if (event.newValue === 'true') {
-                        console.log("hey started!")
+                        console.log("started!")
                         onStart();
                     } else {
-                        console.log("hey stopped!")
+                        console.log("stopped!")
                         onStop();
                     }
                 }
@@ -421,10 +421,10 @@
             window.addEventListener('storage', (event) => {
                 if (event.key === 'isClearCache') {
                     if (event.newValue === 'true') {
-                        console.log("hey clear cache!")
+                        console.log("clear cache!")
                         clearCache();
                     } else {
-                        console.log("hey no clear cache!")
+                        console.log("clear cache!")
                     }
                 }
             });
@@ -432,10 +432,10 @@
             window.addEventListener('storage', (event) => {
                 if (event.key === 'isDownloadTiny') {
                     if (event.newValue === 'true') {
-                        console.log("hey download tiny!")
+                        console.log("download tiny!")
                         loadWhisper('tiny.en');
                     } else {
-                        console.log("hey no download tiny!")
+                        console.log("download tiny!")
                     }
                 }
             });
@@ -443,10 +443,10 @@
             window.addEventListener('storage', (event) => {
                 if (event.key === 'isDownloadBase') {
                     if (event.newValue === 'true') {
-                        console.log("hey download base!")
+                        console.log("download base!")
                         loadWhisper('base.en');
                     } else {
-                        console.log("hey no download base!")
+                        console.log("download base!")
                     }
                 }
             });
