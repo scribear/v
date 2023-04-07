@@ -364,7 +364,7 @@
                     document.getElementById('state-status').innerHTML = Module.get_status();
                     document.getElementById('state-transcribed').innerHTML = transcribedAll;
                     // console.log("check transcription: "+transcribedAll);
-                    sessionStorage.setItem('myText', transcribedAll);
+                    sessionStorage.setItem('whisper_transcript', transcribedAll);
                 }, 100);
             }
 
@@ -407,7 +407,7 @@
             // simulating button clicks
 
             window.addEventListener('storage', (event) => {
-                if (event.key === 'isTrue') {
+                if (event.key === 'listening') {
                     if (event.newValue === 'true') {
                         console.log("hey started!")
                         onStart();
@@ -436,6 +436,17 @@
                         loadWhisper('tiny.en');
                     } else {
                         console.log("hey no download tiny!")
+                    }
+                }
+            });
+            
+            window.addEventListener('storage', (event) => {
+                if (event.key === 'isDownloadBase') {
+                    if (event.newValue === 'true') {
+                        console.log("hey download base!")
+                        loadWhisper('base.en');
+                    } else {
+                        console.log("hey no download base!")
                     }
                 }
             });
