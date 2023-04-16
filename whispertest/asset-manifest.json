@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/v/whispertest/static/css/main.9c1fac1d.css",
+    "main.js": "/v/whispertest/static/js/main.0877302b.js",
+    "static/js/787.bb732eec.chunk.js": "/v/whispertest/static/js/787.bb732eec.chunk.js",
+    "index.html": "/v/whispertest/index.html",
+    "main.9c1fac1d.css.map": "/v/whispertest/static/css/main.9c1fac1d.css.map",
+    "main.0877302b.js.map": "/v/whispertest/static/js/main.0877302b.js.map",
+    "787.bb732eec.chunk.js.map": "/v/whispertest/static/js/787.bb732eec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c1fac1d.css",
+    "static/js/main.0877302b.js"
+  ]
+}
