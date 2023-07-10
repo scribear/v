@@ -173,6 +173,9 @@
                 cbProgress = function(p) {
                     let el = document.getElementById('fetch-whisper-progress');
                     el.innerHTML = Math.round(100*p) + '%';
+                    
+                    console.log('progress: ' + Math.round(100*p) + '%');
+                    sessionStorage.setItem('whisper_progress', Math.round(100*p));
                 };
 
                 cbCancel = function() {
