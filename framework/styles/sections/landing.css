@@ -1,0 +1,295 @@
+#landing-page {
+   height: 110vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background: linear-gradient(0.50turn, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));
+   padding-left: 48px;
+   padding-right: 48px;
+}
+
+/* text animation */
+#l-p-text {
+   min-height: max-content;
+   height: 4vh;
+   display: flex;
+   align-items: center;
+   color: rgba(255, 255, 255, 0.9);
+   background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, black 50%) right;
+   background-size: 200%;
+   transition: .5s ease-out;
+   background-position: left;
+   text-indent: 10vw;
+   font-family: "Roboto Mono", sans-serif;
+   font-size: 24px;
+   overflow: hidden;
+   white-space: nowrap;
+}
+
+
+
+
+/* launch button */
+#l-p-btn-container {
+   height: 68vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#launch-button {
+   font-size: 60px;
+   color: #000;
+   position: relative;
+   display: inline-block;
+   padding: 10px 30px;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: rgba(255 255 255, 0.4);
+   background: none;
+   border: none;
+   letter-spacing: 2px;
+   transition: 0.5s;
+}
+
+
+#launch-button:hover {
+   background: #000;
+   color: #fff;
+   transition: 0.5s;
+}
+
+#launch-button span {
+   display: block;
+   position: absolute;
+   background: #000;
+}
+
+#launch-button span:nth-child(1) {
+   left: 0;
+   bottom: 0;
+   width: 4px;
+   height: 100%;
+   transform: scaleY(0);
+   transform-origin: top;
+   transition: transform 0.5s;
+}
+
+#launch-button span:nth-child(2) {
+   left: 0;
+   bottom: 0;
+   height: 4px;
+   width: 100%;
+   transform: scaleX(0);
+   transform-origin: right;
+   transition: transform 0.5s;
+}
+
+#launch-button span:nth-child(3) {
+   right: 0;
+   bottom: 0;
+   width: 4px;
+   height: 100%;
+   transform: scaleY(0);
+   transform-origin: top;
+   transition: transform 0.5s;
+   transition-delay: 0.5s;
+}
+
+#launch-button span:nth-child(4) {
+   left: 0;
+   top: 0;
+   height: 4px;
+   width: 100%;
+   transform: scaleX(0);
+   transform-origin: right;
+   transition: transform 0.5s;
+   transition-delay: 0.5s;
+}
+
+#launch-button span:nth-child(1) {
+   animation: btn-left 4s forwards;
+}
+#launch-button span:nth-child(2) {
+   animation: btn-bottom 4s forwards;
+}
+#launch-button span:nth-child(3) {
+   animation: btn-right 4s forwards;
+}
+#launch-button span:nth-child(4) {
+   animation: btn-top 4s forwards;
+}
+@keyframes btn-left {
+   0% {
+      transform: scaleY(0);
+      transform-origin: bottom;
+   }
+   25% {
+      transform: scaleY(1);
+      transform-origin: bottom;
+   }
+   100% {
+      transform: scaleY(1);
+      transform-origin: bottom;
+   }
+}
+@keyframes btn-bottom {
+   0% {
+      transform: scaleX(0);
+      transform-origin: left;
+   }
+   25% {
+      transform: scaleX(1);
+      transform-origin: left;
+   }
+   100% {
+      transform: scaleX(1);
+      transform-origin: left;
+   }
+}
+@keyframes btn-right {
+   0% {
+      transform: scaleY(0);
+      transform-origin: bottom;
+   }
+   25% {
+      transform: scaleY(0);
+      transform-origin: bottom;
+   }
+   50% {
+      transform: scaleY(1);
+      transform-origin: bottom;
+   }
+   100% {
+      transform: scaleY(1);
+      transform-origin: bottom;
+   }
+}
+@keyframes btn-top {
+   0% {
+      transform: scaleX(0);
+      transform-origin: left;
+   }
+   25% {
+      transform: scaleX(0);
+      transform-origin: left;
+   }
+   50% {
+      transform: scaleX(1);
+      transform-origin: left;
+   }
+   100% {
+      transform: scaleX(1);
+      transform-origin: left;
+   }
+}
+
+
+/* down arrow */
+#l-p-arrow-container {
+   height: 26vh;
+   display: flex;
+   justify-content: center;
+}
+.down-arrow {
+   opacity: 1;
+   animation: move 1.5s infinite;
+}
+.down-arrow a {
+   scroll-behavior: smooth;
+}
+
+.down-arrow a i {
+   font-size: 60px;
+   color: #000;
+}
+
+@keyframes move {
+   0% {margin-left: 0;}
+   50% {margin-top: 10px;}
+   100% {margin-top: 0;}
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen  
+and (max-width : 767px) {
+   #landing-page {
+      padding-left: 24px;
+      padding-right: 24px;
+   }
+
+   #l-p-text {
+      height: 4vh;
+      background-position: left;
+      text-indent: 5vw;
+      font-size: 18px;
+   }
+
+   #launch-button {
+      font-size: 45px;
+   }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px) {
+   #landing-page {
+      padding-left: 24px;
+      padding-right: 24px;
+   }
+   
+   #l-p-text {
+      height: 5vh;
+      background-position: left;
+      text-indent: 5vw;
+      font-family: "Roboto Mono", sans-serif;
+      font-size: 23px;
+      display:flex;
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: none;
+   }
+  
+   #launch-button {
+      font-size: 55px;
+   }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops small window ----------- */
+@media only screen 
+and (min-width : 992px)
+and (max-width : 1223px) {
+   #launch-button {
+      font-size: 52px;
+   }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}

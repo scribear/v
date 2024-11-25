@@ -1,151 +1,359 @@
-<!--
-<html>
- Todo. Autogenerate this file as part of the publishing process. Include no-caching directives in the head area
-<body style="background-image: linear-gradient(0deg, rgba(43,43,43,1) 0%, rgba(27,27,27,1) 42%, rgba(0,0,0,1) 100%);">
-  <p style="color:white; font-size:60px;">ScribeAR</p>
-<p style="color:white; font-size:20px;">This index will eventually be generated automatically and contain a list of versions, with the most recent version at the top of the list.</p>
-
-<p style="color:white; font-size:20px;">The file 'version' also contains the most recent version number (e.g. '0000')</p>
-
-
-<p style="color:white; font-size:20px;">Developers may want to fix bugs and develop new features can see the latest development build <a href='dev'>here</a>.</p>
-
-<p style="color:white; font-size:20px;">Please select which version you'd like to use. The highest version is usually the best choice, unless there are conflicts with your hardware.</p> 
-  <p style="color:white; font-size:20px;"><a href='00002/'>00002</a></p>
-  <p style="color:white; font-size:20px;"><a href='00001/'>00001</a></p>
-  <p></p>
-  <p style="color:white; font-size:20px;"><a href='Azure/'>Microsoft Azure Cognitive Service Speech to Text (subscription required)</a></p>
-</body>
-</html>
--->
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href = "https://fonts.googleapis.com/css?family=Montserrat:400,800" rel = "stylesheet">
-        <link rel = "stylesheet" type = "text/css" href = "main.css">
-        <title>ScribeAR</title>
-    </head>
-    
-    <body>
-        <div class = "header">
-            <div class = "inner_header">
-                <div class = "logo_container">
-                    <img class = "icon" src = "workspace%20icon%20.png">
-                    <h1>ScribeAR Versions</h1>
-                </div>
-                <ul class = "nav"> 
-                    <a href = "#content"><li>Version List</li></a>
-                    <a href = "https://publish.illinois.edu/scribe-ar/"><li>About</li></a>
-                </ul>
-            </div>
-        </div>
-        
-         <div id = "versions">
-            <div id = "quotefirstpart">
-                <h1>ScribeAR Version List</h1>
-            </div>
-            <div id = "quotesecondpart">
-                <h1>This index will eventually be generated automatically and contain a list of versions, with the most recent version at the top of the list. The file 'version' also contains the most recent version number (e.g. '0000'). Developers who may want to fix bugs and develop new features can see the latest development build.</h1>
-            </div>
-            <section>
-                <div class = "scrolldown">
-                    <a href = "#versioncontrol">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>    
-                </div>
-             </section>
-             
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Roboto+Mono">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+      <link rel="stylesheet" type="text/css" href="framework/styles/index.css">
+      <link rel="icon" type="image/png" href="framework/images/scribear.png">
+      <title>ScribeAR</title>
+   </head>
+
+   <body>
+      <!--landing page -->
+      <div id="landing-page">
+         <!-- landing page header -->
+         <header id="l-p-header">
+            <a class="brand" href="#">ScribeAR</a>
+            <nav>
+               <a class="nav-link" id="site-nav" href="#features" onclick="toggleMobileNav()">Features</a>
+               <a class="nav-link" id="site-nav" href="#about-us" onclick="toggleMobileNav()">About us</a>
+               <a class="nav-link" id="site-nav" href="#for-contributors" onclick="toggleMobileNav()">For Contributors</a>
+               <button class="close-btn">
+                  <i class="fas fa-times close home-btn" onclick="toggleMobileNav()"></i>
+               </button>
+            </nav>
+            <button class="open-btn" onclick="toggleMobileNav()">
+               <i class='fa-solid fa-bars'></i>
+            </button>
+         </header>
+            
+         <!-- landing page text -->
+         <div id="l-p-text">
+         </div>
          
-            
-        </div>
-        
-        <div id = "content">
-            <div id = "features">
-                <div id = "versioncontrol">
-                    <h1>Please select which version you'd like to use. The highest version is usually the best choice, unless there are conflicts with your hardware.</h1>
-                </div>
-             <!-- Todo fix css / id formatting only defined upto versioncontrol5 -->
-                <div id = "versioncontrol2">
-                    <h1><a href = '00001/'> 00001 </a> - ScribeAR Original Version</h1>
-                </div>
-                <div id = "versioncontrol3">
-                    <h1><a href = '00002/'> 00002 </a> - Added Visualiztions</h1>
-                </div>
-                <div id = "versioncontrol4">
-                    <h1><a href = '00003/'> 00003 </a> - Added SideBar and changed UI components</h1>
-                </div>
-                <div id = "versioncontrol5">
-                    <h1><a href = '00004/'> 00004 </a> - Microsoft Azure cognitive services compatibility</h1>
-                </div>
-                <div id = "versioncontrol5">
-                    <h1><a href = '00005/'> 00005 </a> - Added Audio Visualizations</h1>
-                </div>
-                <div id = "versioncontrol5">
-                    <h1><a href = '00006/'> 00006 </a> - Added StreamText compatibility</h1>
-                </div>
-                <div id = "versioncontrol5">
-                    <h1><a href = '00007/build'> 00007 </a> - Refactored Version</h1>
-                </div>
-                <div id = "versioncontrol5">
-                    <h1><a href = '00008/build'> 00008 </a> - Updated Phrase recognition</h1>
-                </div>
-                <div id = "versioncontrol5">
-                    <h1><a href = '00009'> 00009 </a> - Added Audio Visualization</h1>
-                </div>
-                <div id = "versioncontrol5">
-                    <h1><a href = '00010'> 00010 </a> - Whisper and Semantic Analysis demonstrations</h1>
-                </div>
-                 <div id = "versioncontrol5">
-                    <h1><a href = 'latest'> Latest </a> - Latest Version</h1>
-                </div>
-<!--                <div id = "versioncontrol5">
-                    <h1><a href = 'test/'> Test </a> - Checking Mobile compatibility</h1>
-                </div> -->
-                
-            </div>
-            
-<!--
-            <div id = "about"> 
-                <div id = "meet">
-                     <h1>Meet ScribeAR</h1>
-                </div>
-            </div>
--->
-            
-<!--
-            <script>
-                var slideIndex = 1;
-                showDivs(slideIndex);
+         <!-- landing page launch button -->
+         <main id="l-p-btn-container">
+            <!-- landing page launch button -->
+            <a href="https://scribear.illinois.edu/v/latest">
+               <button id="launch-button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Launch
+               </button>
+            </a> 
+         </main>
 
-                function plusDivs(n) {
-                    showDivs(slideIndex += n);
-                }
 
-                function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                if (n > x.length) {slideIndex = 1} 
-                    if (n < 1) {slideIndex = x.length} ;
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none"; 
-                    }
-                    x[slideIndex - 1].style.display = "block"; 
-                }
-            </script>
-        
-            <div id = "footer">
-                <div class = "inner_footer">
-                    <div class = "logo_container_footer">
-                        <h1>Copyright @ScribeAR</h1>
-                    </div>
-                </div>
+         <!-- landing page down arrow icon -->
+         <div id="l-p-arrow-container">
+            <div class="down-arrow">
+               <a href="#features" role="button" class="btn btn-lg">
+                  <i class="material-icons">expand_more</i>
+               </a>
             </div>
--->
+         </div>
+      </div>
+
+      <!-- features section-->
+      <section style="background-color:rgba(0, 0, 0, 0.8)" id=features>
+         <h2 class="section-title" style="color:white">Features</h2>
+   
+         <button class="accordion" onclick="spin2()">
+            <span class="section-subtitle" style="color:white;"> Discover an improved platform for streaming captions
+               <i class="material-icons arrow">arrow_forward_ios</i>
+            </span>
+         </button>
+         <div class="panel" style="background-color:black">
+            <div class="cards-container">
+               
+               <div class="card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="card-body">
+                           <h2 class="card-title">Any device, anywhere.</h2>
+                           <i class="bi bi-headset-vr" id="vr-icon"></i>
+                           <i class="bi bi-phone" id="phone-icon"></i>
+                           <i class="bi bi-laptop" id="computer-icon"></i> 
+                        </div> 
+                     </div>
+                     <div class="card-back">
+                        <div class="card-body">
+                           <p class="card-text">
+                              ScribeAR meets you wherever you are.
+                              Captions on a laptop? A phone? An augmented-reality headset? Check, check, and check.
+                              No download required.
+                           </p> 
+                        </div>
+                     </div>
+                  </div>                                        
+               </div>
             
-        </div>   
-    </body>
+               <div class="card" style="height:300px">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="card-body">
+                           <h2 class="card-title">Choose your captioning service.</h2>
+                           <i class="bi bi-collection" id="collection-icon"></i> 
+                        </div> 
+                     </div>
+                     <div class="card-back">
+                        <div class="card-body">
+                           <p class="card-text">
+                              ScribeAR connects to your preferred captioning sources, ranging from on-demand automatic systems to high-accuracy human captioners.
+                           </p> 
+                        </div>
+                     </div>
+                  </div>                                        
+               </div>
+                  
+               <div class="card" style="height:300px">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="card-body">
+                           <h2 class="card-title">The little things that aren't so little.</h2>
+                           <i class="bi bi-gear-wide-connected" id="gear-icon"></i> 
+                        </div> 
+                     </div>
+                     <div class="card-back">
+                        <div class="card-body">
+                           <p class="card-text">
+                              Themes. Font size. Language selection*. Custom word lists*. 
+                              With so many ways to interact and personalize, ScribeAR makes your captions your captions.
+                           </p>
+                           <p class="card-text-small">
+                              *Available for some captioning 
+                              services
+                           </p> 
+                        </div>
+                     </div>
+                  </div>                                        
+               </div>
+
+            </div>
+         </div>
+      </section>
+        
+
+      <!-- about us section -->
+      <section style="background-color:rgba(238, 238, 238, 0.8)" id="about-us">
+         <h2 class="section-title">About ScribeAR</h2>
+         <button class="accordion">
+            <span class="section-subtitle" style="color:black;">Meet the team
+               <i class="material-icons arrow" style="color:black";>arrow_forward_ios</i>
+            </span>
+         </button>
+         <div class="panel about-us-panel" style="background-color:#EEEEEE">
+            <div class="about-us-container">
+               <div class="scribear-info">
+                  <h2 class="about-us-title">What is ScribeAR?</h2>
+                  <p>The ScribeAR project is exploring ways to enhance real-time captioning as a communication access tool.</p>
+                  <h5 class="about-us-subtitle">Traditional captioning paradigms can be constraining:</h5>
+                  <div class="info-row">
+                     <div class="info-card">
+                        <h5 class="info-title">Availability</h5>
+                        <p class="info-text">
+                           Captions might be available only for specific events, such as when watching a movie or taking a class. But life takes place 24/7.
+                        </p>
+                     </div>
+                     <div class="info-card">
+                        <h5 class="info-title">Participation</h5>
+                        <p class="info-text">
+                           Captions are often streamed on laptops or mobile devices. User attention is therefore split between the captions and the action.
+                        </p>
+                     </div>
+                     <div class="info-card">
+                        <h5 class="info-title">Logistics</h5>
+                        <p class="info-text">
+                           It's often possible to pre-arrange for captioning services. But what about spontaneous interactions, like water cooler chats?
+                        </p>
+                     </div>
+                  </div>
+                  <h5 class="about-us-subtitle">ScribeAR strives to address some of these challenges with creative design:</h5>
+                  <div class="info-row">
+                     <div class="info-card">
+                        <h5 class="info-title">Flexibility</h5>
+                        <p class="info-text">
+                           ScribeAR is a lightweight, web app that can run on nearly any device with a web browser anytime and anywhere with an internet connection.
+                        </p>
+                     </div>
+                     <div class="info-card">
+                        <h5 class="info-title">Connection</h5>
+                        <p class="info-text">
+                           ScribeAR is compatible with  augmented-reality (AR) headsets, which allow users to view captions while fully  engaging in the action.
+                        </p>
+                     </div>
+                     <div class="info-card">
+                        <h5 class="info-title">Options</h5>
+                        <p class="info-text">
+                           ScribeAR can stream captioning from a wide range of sources spanning various price points and accuracy levels.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="team-info">
+                  <h2 class="about-us-title">Meet the Team</h2>
+                  <p>We are a team of undergraduate and graduate students working at the University of Illinois Urbana-Champaign as a research group within the Grainger College of Engineering.</p>
+                  <p>Interested in joining us? We'd love to hear from you—especially if you're an undergraduate or graduate student at the University of Illinois. <a href="mailto:scribear-support@illinois.edu" id="email-link">Send us an email</a></p>
+               </div>
+               <div class="team-members">
+                  <button class="accordion" style="padding: 0; margin-top: 20px;">
+                     <span class="section-subtitle" style="color:black;"><h2 class="about-us-title" style="display: inline;">Team Members</h2>
+                        <i class="material-icons arrow" style="font-size: 24px; color:black";>arrow_forward_ios</i>
+                     </span>
+                  </button>
+                  <div class="panel" style="background-color:#EEEEEE; padding: 0;">
+                     <div class="founders grid">
+                        <div class="member-card">
+                           <div class="photo">
+                              <img src="framework/images/members/lawrence.jpg" alt="Professor Lawrence">
+                           </div>
+                           <div class="member-info co-principal-investigator">
+                              <h2 class="name">
+                                 Lawrence Angrave
+                              </h2>
+                              
+                              <h5>(co-principal investigator)</h5>
+                              <p class="description">
+                                 Professor, Department of Computer Science
+                              </p>
+                              
+                           </div>
+                        </div>
+                        <div class="member-card">
+                           <div class="photo">
+                              <img src="framework/images/members/colin.png" alt="Colin Lualdi">
+                           </div>
+                           <div class="member-info co-principal-investigator">
+                              <h2 class="name">
+                                 Colin Lualdi
+                              </h2>
+                              
+                              <h5>(co-principal investigator)</h5>
+                              <p class="description">
+                                 PhD Student, Department of Physics
+                              </p>
+                              
+                           </div>
+                        </div>
+                     </div>
+
+                     <h4>Current Members</h4>
+                     <div class="current-members grid my-3">
+
+                     </div>
+
+                     <button class="accordion">
+                        <span class="section-subtitle" style="color:black; font-size: 20px;">Past Members
+                           <i class="material-icons arrow" style="color:black";>arrow_forward_ios</i>
+                        </span>
+                     </button>
+                     <div class="panel past-members-panel" style="background-color:#EEEEEE">
+                        <div class="past-members grid-small my-3">
+                        </div>
+                     </div>
+                  </div>   
+               </div>
+            </div>
+         </div>   
+      </section>
+
+
+      <!--for contributors section-->
+      <section style="background-color:rgba(0, 0, 0, 0.8)" id=for-contributors>
+         <h2 class="section-title" style="color:white">For Contributors</h2>
+         <button class="accordion">
+            <span class="section-subtitle" style="color:white; font-size: 20px;">Take a look under the hood
+               <i class="material-icons arrow">arrow_forward_ios</i>
+            </span>
+         </button>
+         <div class="panel" style="background-color:black; color:white;">
+            <div class="row">
+               <div class="left">
+                  <i class="bi bi-file-earmark-text" style="font-size:70px" id="file-icon"></i>
+               </div>
+               <div class="right">
+                  <h2>Research Papers</h2>
+                  <h4>Design Principles</h4>
+                  <p>
+                     <a href="https://peer.asee.org/scribear-a-new-take-on-augmented-reality-captioning-for-inclusive-education-access" id="our-research-link" style="text-decoration:none" target="_blank">Angrave, L., & Lualdi, C. P., & Jawad, M., & Javid, T. (2021, April), ScribeAR: A New Take on Augmented-Reality Captioning for Inclusive Education Access Paper presented at 2021 Illinois-Indiana Regional Conference, Virtual. 10.18260/1-2--38276.</a>
+                  </p>
+                  <h4>Integrating Deep Learning Tools</h4>
+                  <p>
+                     <a href="https://peer.asee.org/44572" id="our-research-link" style="text-decoration:none" target="_blank">Wang, Y., & Lualdi, C. P., & Angrave, L., & Purushotam, G. N. (2023, June), Using Deep Learning and Augmented Reality to Improve Accessibility: Inclusive Conversations Using Diarization, Captions, and VisualizationPaper presented at 2023 ASEE Annual Conference & Exposition, Baltimore , Maryland.</a>
+                  </p>
+               </div>
+            </div>
+            <div class="row";>
+               <div class="left";>
+                  <i class="bi bi-github" style="font-size:70px" id="github-icon"></i>
+               </div>
+               <div class="right">
+                  <h2>Github</h2>
+                  <p>Visit <a href="https://github.com/scribear/ScribeAR.github.io" id="github-link">Our Github page</a>  page for the latest in development and contribution opportunities.</p>    
+               </div>
+            </div>
+            <div class="row";>
+               <div class="left";>
+                  <i class="bi bi-clock-history" style="font-size:70px" id="clock-icon"></i>
+               </div>
+               <div class="right";>
+                  <h2>Version history</h2>
+                  <p>
+                     <a href="https://scribear.illinois.edu/v/00010/" style=color:white>00010</a> - Whisper and Semantic Analysis demonstrations <br>
+                     <a href="https://scribear.illinois.edu/v/00009/" style=color:white>00009</a> - Added Audio Visualization <br>
+                     <a href="https://scribear.illinois.edu/v/00008/build" style=color:white>00008</a> - Updated Phrase Recognition <br>
+                     <a href="https://scribear.illinois.edu/v/00007/build" style=color:white>00007</a> - Refactored Version <br>
+                     <a href="https://scribear.illinois.edu/v/00006/" style=color:white>00006</a> - Added StreamText compatability <br>
+                     <a href="https://scribear.illinois.edu/v/00005/" style=color:white>00005</a> - Added audio visualizations <br>
+                     <a href="https://scribear.illinois.edu/v/00004/" style=color:white>00004</a> - Microsoft Azure cognitive services compatibility <br>
+                     <a href="https://scribear.illinois.edu/v/00003/" style=color:white>00003</a> - Added sidebar and changed UI components <br>
+                     <a href="https://scribear.illinois.edu/v/00002/" style=color:white>00002</a> - Added visualizations <br>
+                     <a href="https://scribear.illinois.edu/v/00001/" style=color:white>00001</a> - ScribeAR original version <br>
+                  </p>
+               </div>
+            </div>
+         </div>   
+      </section>
+
+      <!-- page footer -->
+      <footer>
+         <h4 class="award-text px-4 pt-5 text-white">
+            ScribeAR is funded by an award from Microsoft for accessible research, an internal University of Illinois Augmented Reality award, and the University of Illinois Department of Physics
+         </h4>
+         <div class="logos">
+            <div class="logo">
+               <a href="https://www.microsoft.com">
+                  <img src="framework/images/microsoft-gray.png" alt="microsoft"/>
+               </a>
+            </div>
+            <div class="logo">
+               <a href="https://grainger.illinois.edu">
+                  <img src="framework/images/grainger.png" alt="grainger college of engineering"/>
+               </a>
+            </div>
+            <div class="logo">
+               <p class="text-center" id="vr-illinois">VR@Illinois</p>
+            </div>
+            <div class="logo">
+               <a href="https://illinois.edu">
+                  <img class="img-fluid" id="big-img" src="framework/images/illinois.png" alt="UIUC"/>
+               </a>
+            </div>
+         </div>
+         <hr />
+         <div class="copy-right-container">
+            <p id="copy-right">© 2022 University of Illinois Board of Trustees</p>
+         </div>
+      </footer>
+
+      <!-- javascript references-->
+      <script src="framework/script/index.js"></script>
+   </body>
 </html>
-
