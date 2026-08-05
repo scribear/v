@@ -1,0 +1,95 @@
+.grid-small {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-template-rows: repeat(7, 30px);
+   grid-auto-flow: column;
+}
+
+.past-members div {
+   font-size: 20px;
+   line-height: 1.5;
+   overflow: hidden;
+}
+
+
+/* Smartphones (protrait and landscape) ----------- */
+@media only screen 
+and (max-width : 767px) {
+   .grid-small {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(17, 18px);
+   }
+   
+   .past-members div {
+      font-size: 12px;
+   }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px) {
+   .grid-small {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(9, 24px);
+   }
+   
+   .past-members div {
+      font-size: 16px;
+   }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : landscape) {
+   .grid-small {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(9, 24px);
+   }
+   
+   .past-members div {
+      font-size: 16px;
+   }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : portrait) {
+   .grid-small {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(11, 24px);
+   }
+   
+   .past-members div {
+      font-size: 16px;
+   }
+}
+
+/* Desktops small window ----------- */
+@media only screen 
+and (min-width : 992px)
+and (max-width : 1223px) {  
+   .past-members div {
+      font-size: 16px;
+   }
+}
+
+/* Desktops and laptops normal ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}

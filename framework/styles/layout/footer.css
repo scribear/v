@@ -1,0 +1,140 @@
+footer {
+  background: rgba(238, 238, 238, 0.8);
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 2vw 0;
+}
+
+footer .award-text {
+  font-size: 20px;
+  padding-left: 48px;
+  padding-right: 48px;
+  margin-top: 3rem;
+  margin-bottom: 8px;
+  color: black;
+}
+
+footer .logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+footer .logo {
+  width: 25%;
+  position: relative;
+}
+
+
+footer .logo:nth-of-type(1) img {
+  width: 70%;
+}
+
+footer .logo:nth-of-type(2) img {
+  width: 100%;
+}
+
+footer .logo:nth-of-type(4) img {
+  width: 65%;
+}
+
+#vr-illinois {
+   font-family: "Libre Franklin";
+   font-size: 40px;
+   font-weight: 600;
+   color:#13294B;
+}
+
+footer hr {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border: 1px solid rgb(33, 37, 41);
+  opacity: .25;
+}
+
+footer .copy-right-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#copy-right {
+  color: black;
+  text-align: center;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 767px) {
+  footer {
+      padding: 20px 0;
+  }
+  footer .award-text {
+    font-size: 10px;
+  }
+  footer #vr-illinois {
+      font-size: 16px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+  footer {
+    padding: 20px 0;
+  }
+  footer .award-text {
+    font-size: 16px;
+  }
+  footer #vr-illinois {
+      font-size: 28px;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops small window ----------- */
+@media only screen 
+and (min-width : 992px)
+and (max-width : 1223px) {
+  footer .award-text {
+    font-size: 18px;
+  }
+  footer #vr-illinois {
+    font-size: 40px;
+}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}

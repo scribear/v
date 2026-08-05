@@ -1,0 +1,202 @@
+.grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+.founders {
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+.member-card {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.member-card .photo {
+   width: 180px;
+   height: 180px;
+   border-radius: 50%;
+   margin-bottom: 1rem;
+}
+
+.member-card .photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+}
+
+.member-card .member-info .name {
+   font-size: 28px;
+   font-weight: 500;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 8px;
+}
+
+.member-card .member-info .description {
+   font-size: 16px;
+   text-align: center;
+}
+
+.member-card .member-info h5 {
+   font-size: 16px;
+   text-align: center;
+}
+
+/* Smartphones (protrait and landscape) ----------- */
+@media only screen 
+and (max-width : 767px) {
+   .grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .member-card .photo {
+      width: 100px;
+      height: 100px;
+   }
+
+   .member-card .member-info .name {
+      font-size: 16px;
+   }
+   
+   .member-card .member-info .description {
+      font-size: 10px;
+   }
+
+   .member-card .member-info h5 {
+      font-size: 12px;
+      text-align: center;
+   }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px) {
+   .grid {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .member-card .photo {
+      width: 140px;
+      height: 140px;
+   }
+
+   .member-card .member-info.co-principal-investigator .name {
+      height: 65px;
+   }
+
+   .member-card .member-info .name {
+      font-size: 22px;
+   }
+   
+   .member-card .member-info .description {
+      font-size: 12px;
+   }
+
+   .member-card .member-info h5 {
+      font-size: 14px;
+      text-align: center;
+   }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : landscape) {
+   .grid {
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   .member-card .photo {
+      width: 120px;
+      height: 120px;
+   }
+
+   .member-card .member-info .name {
+      font-size: 20px;
+   }
+   
+   .member-card .member-info .description {
+      font-size: 12px;
+   }
+
+   .member-card .member-info h5 {
+      font-size: 14px;
+      text-align: center;
+   }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : portrait) {
+   .grid {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .member-card .photo {
+      width: 140px;
+      height: 140px;
+   }
+
+   .member-card .member-info .name {
+      font-size: 22px;
+   }
+   
+   .member-card .member-info .description {
+      font-size: 12px;
+   }
+
+   .member-card .member-info h5 {
+      font-size: 14px;
+      text-align: center;
+   }
+}
+
+/* Desktops small window ----------- */
+@media only screen 
+and (min-width : 992px)
+and (max-width : 1223px) {
+   .grid {
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   .member-card .photo {
+      width: 140px;
+      height: 140px;
+   }
+
+   .member-card .member-info .name {
+      font-size: 22px;
+   }
+   
+   .member-card .member-info .description {
+      font-size: 12px;
+   }
+
+   .member-card .member-info h5 {
+      font-size: 14px;
+      text-align: center;
+   }
+}
+
+/* Desktops and laptops normal ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}

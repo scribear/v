@@ -1,0 +1,150 @@
+@import "layout/header.css";
+@import "layout/footer.css";
+@import "components/feature-card.css";
+@import "components/info-card.css";
+@import "components/member-card.css";
+@import "components/past-members.css";
+@import "sections/landing.css";
+@import "sections/features.css";
+@import "sections/about-us.css";
+@import "sections/for-contributors.css";
+
+
+* {
+   font-family:"Poppins", sans-serif;
+   padding: 0;
+   margin: 0;
+	vertical-align: baseline;
+   box-sizing: border-box;
+}
+
+html, body {
+   max-width: 100%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+}
+
+body {
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+   overflow-y: scroll;
+}
+
+body::before {
+   content: "";
+   background-image: url('../images/BIF1-980x550-classroom.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: fixed;
+   top: 0px;
+   right: 0px;
+   bottom: 0px;
+   left: 0px;
+   z-index: -2;
+}
+
+@keyframes fade-in {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+.accordion {
+   background-color:transparent;
+   color: transparent;
+   cursor: pointer;
+   padding-top: 18px;
+   padding-bottom: 18px;
+   width: fit-content;
+   text-align: left;
+   border: none;
+   outline: none;
+   transition: 0.4s;
+}
+
+.section-title {
+   font-size: 3rem !important;
+}
+
+.section-subtitle {
+   font-size: 20px !important;
+}
+
+.accordion .section-subtitle .arrow {
+   transform: rotate(0);
+   font-size: 18px; 
+   color:white;
+   align-items: center;
+}
+
+.accordion.active .section-subtitle .arrow {
+   transform: rotate(90deg);
+}
+
+.panel {
+   padding: 0 18px;
+   background-color: white;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.2s ease-out;
+}
+
+
+/* Smartphones (protrait and landscape) ----------- */
+@media only screen 
+and (max-width : 767px) {
+   .section-title {
+      font-size: 2rem !important;
+   }
+   .section-subtitle {
+      font-size: 17px !important;
+   }
+   .accordion .section-subtitle .arrow {
+      font-size: 14px; 
+   }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px) {
+   .section-title {
+      font-size: 2.4rem !important;
+   }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : portrait) {
+
+}
+
+/* Desktops small window ----------- */
+@media only screen 
+and (min-width : 992px)
+and (max-width : 1223px) {
+   
+}
+
+/* Desktops and laptops normal ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}

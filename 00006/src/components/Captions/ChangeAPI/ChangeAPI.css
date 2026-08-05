@@ -1,0 +1,27 @@
+/*For most Desktops and Laptops */
+.enter {
+  background-color: white;
+  cursor: pointer;
+}
+
+.setting-wrapper2 {
+    background-color: white;
+    border-radius: 15%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 60%;
+    position:absolute;
+    cursor: pointer;
+    border: solid black;
+    border-width: thin;
+
+}
+
+#entertext {
+    position: static;
+    color: black;
+    text-align: center;
+    font-size: 1.6vw;
+    font-family: 'Arial';
+}

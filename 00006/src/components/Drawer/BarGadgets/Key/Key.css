@@ -1,0 +1,43 @@
+/*For most Desktops and Laptops */
+
+* {
+  box-sizing: border-box;
+}
+
+.keytext {
+    position: static;
+    font-family: 'Arial';
+    font-size: .95rem;
+    margin-top: 2.1vh;
+
+}
+
+.keybox {
+    position: static;
+    margin-top: 1.3vh;
+    margin-left: 2.2vw;
+    height: 5vw;
+}
+
+#azure_key_value {
+    font-family: 'Arial';
+    color: rgba(0, 0, 0, 0.7);
+    width: 90.5%;
+    height: 3.4vh;
+    font-size: .95rem;
+    border-width: thin;
+    border-radius: 4%;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+#azuremenutext {
+    position: static;
+    font-size: .4rem;
+    margin-top: 7vh
+
+}
+
+.divider {
+    width: 100%;
+    margin-top: 1.7vh;
+}

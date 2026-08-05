@@ -1,0 +1,1 @@
+var e=function(e){return e.INACTIVE=`INACTIVE`,e.CONNECTING=`CONNECTING`,e.DISCONNECTED=`DISCONNECTED`,e.ACTIVE=`ACTIVE`,e.ACTIVE_MUTE=`ACTIVE_MUTE`,e.ERROR=`ERROR`,e}({}),t={event:``,language:`en`,startPosition:0},n=`StreamText`,r=e.INACTIVE;export{e as i,r as n,n as r,t};

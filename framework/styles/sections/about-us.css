@@ -1,0 +1,161 @@
+#about-us {
+    padding: 48px;
+}
+
+#about-us p {
+    margin-bottom: 16px;
+}
+
+.about-us-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.about-us-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    max-width: 85%;
+}
+
+.about-us-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.about-us-subtitle {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.scribear-info {
+    padding-bottom: 48px;
+}
+
+.info-row {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#email-link:link {
+    color:black;
+    background-color: transparent;
+ }
+ #email-link:visited {
+    color:black;
+    background-color: transparent;
+ }
+
+.team-members h4 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.team-members .panel {
+    margin-top: 24px;
+}
+
+.past-members-panel {
+    padding: 0 !important;
+}
+
+
+
+/* Smartphones (protrait and landscape) ----------- */
+@media only screen 
+and (max-width : 767px) {
+    #about-us {
+        padding: 24px;
+    }
+
+    .about-us-container {
+        max-width: 100%;
+    }
+
+    .info-row {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+
+    #about-us .about-us-panel {
+        display: block;
+    }
+
+    .about-us-title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    
+    .about-us-subtitle {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px) {
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) 
+and (orientation : portrait) {
+    .info-row {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+
+    .about-us-title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    
+    .about-us-subtitle {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+/* Desktops small window ----------- */
+@media only screen 
+and (min-width : 992px)
+and (max-width : 1223px) {
+   
+}
+
+/* Desktops and laptops normal ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
